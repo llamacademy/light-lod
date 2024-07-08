@@ -11,6 +11,13 @@ Then, on your Player's Camera, attach `LightLODCamera`.
 
 `LightLODCamera` can be attached to as many cameras as you have in the scene. LightLOD will pick the first ACTIVE CAMERA in the list and adjust their LOD based on the distance from this camera. Call `LightLODCamera#Activate` when the active camera should change, and the LODs will adjust automatically.
 
+## Further Optimizations
+As mentioned in [Issue #1](https://github.com/llamacademy/light-lod/issues/1) ([builder-main](https://github.com/builder-main)) - this is not the most optimal performance or configurable solution. 
+
+To take this further, a better way may be to invert the control where the lights register with each Camera, instead of each light adjusting itself. 
+Doing this allows you to extend this much further with potentially custom configurations per camera. It also allows you to consider which lights are highest priority, limit total number of lights, and much more!
+Since this cannot be covered in the tutorial video, this is an exercise left to you. 
+
 ## Supporters
 Have you been getting value out of these tutorials? Do you believe in LlamAcademy's mission of helping everyone make their game dev dream become a reality? Consider becoming a Patreon supporter and get your name added to this list, as well as other cool perks.
 Head over to the [LlamAcademy Patreon Page](https://patreon.com/llamacademy) or join as a [YouTube Member](https://www.youtube.com/channel/UCnWm6pMD38R1E2vCAByGb6w/join) to show your support.
